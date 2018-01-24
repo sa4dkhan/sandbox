@@ -1,0 +1,6 @@
+phpstorm shortcut
+-------------------
+1. Ctrl+E = view recent files.
+2. Ctrl+P brings up a list of valid parameters.
+3. Ctrl+Alt+V brings up that is variable or constant.
+4. Ctrl+W selects the exact text.

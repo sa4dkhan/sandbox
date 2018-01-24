@@ -1,0 +1,1 @@
+<?php$arr = [1,2,3,4,5];$length_of_array = count($arr);$sum = 0;for ($i =0; $i<$length_of_array; $i++){    $sum += $arr[$i];}echo $sum;

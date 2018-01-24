@@ -1,0 +1,10 @@
+.jain-container .navbar-default{
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    border: none;
+}
+.navbar-nav.nav li a{
+    color: #f8f9fa;
+    font-size: 18px;
+}

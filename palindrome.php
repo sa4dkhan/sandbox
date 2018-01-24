@@ -1,0 +1,1 @@
+<?php$palindrome = 'madam';//echo $palindrome[0];$length = strlen('madam');//echo $length;//for($i = 0; $i< $length; $i++){//    echo $palindrome[$i]."<br>";//}//echo "<br>";$var = '';for($j = $length-1; $j >= 0; $j--){ echo   $var.=$palindrome[$j];    echo "<br>";}if($palindrome == $var){    echo 'its palindrome';}else{    echo 'its not palindrome';}

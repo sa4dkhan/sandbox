@@ -1,0 +1,137 @@
+1. mongod --directoryperdb --dbpath D:\works\mongodb\data\db --logpath D:\works\mongodb\log\mongo.log --logappend --rest --install
+
+2. net start MongoDB
+
+3. mongo  //for mongo shell
+
+3. cls
+
+4. show dbs
+
+5. use mycustomers
+
+6. db
+
+7. 
+db.createUser({
+	user: "sa4dkhan",
+	pwd: "1234",
+	roles: ["readWrite", "dbAdmin"]
+});
+
+8.
+db.createCollection('customers);
+
+9.
+show collections
+
+10.
+db.customers.insert({
+	first_name:"John",
+	last_name:"Doe"
+});
+
+11.
+db.customers.find();
+
+12.
+db.customers.insert([
+	{
+		first_name:"John",
+		last_name:"Doe"
+	},
+	{
+		first_name:"Sharmin",
+		last_name:"Sultana"
+		gender:"female"
+	}
+]);
+
+13.
+db.customers.find().pretty();
+
+14.
+db.customers.update({first_name:"John"},{first_name:"John", last_name:"Doe", gender:"male"});
+
+15.
+db.customers.update({first_name:"Akash"},{$unset:{age:1}});
+
+16.
+db.customers.update({first_name:"Akash"},{$set:{age:15}});
+
+17.
+db.customers.update({first_name:"Akash"},{$inc:{age:5}});
+
+18.
+db.customers.update({first_name:"Mary"},{first_name:"Mary",last_name:"Samson"},{upsert:true});
+
+19.
+
+db.customers.update({first_name:"Sharmin"},{$rename:{"gender":"sex"}});
+
+20.
+db.customers.remove({first_name:"Sharmin"});
+
+21.
+db.customers.remove({first_name:"Sharmin"},{justOne:true});
+
+22.
+db.customers.find({$or:[{first_name:"Sharmin"},{first_name:"Akash"}]});
+
+23.
+db.customers.find({gender:"male"}).pretty();
+
+
+24. 
+db.customers.find({age:{$lt:40}});
+
+25.
+db.customers.find({age:{$gt:40}});
+
+26.
+db.customers.find({age:{$gte:40}});
+
+27.
+db.customers.find({age:{$lte:40}});
+
+28.
+db.customers.find({"address.city":"Boston"});
+
+29.
+db.customers.find({memberships:"mem1"});
+
+30.
+db.customers.find().sort({last_name:1}); //ascending order
+
+31.
+db.customers.find().sort({last_name:-1}); //descending order
+
+32.
+db.customers.find().count();
+
+33.
+db.customers.find({gender:"male"}).count();
+
+34.
+db.customers.find().limit(4);
+
+35.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
